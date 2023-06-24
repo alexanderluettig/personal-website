@@ -1,70 +1,26 @@
 import Head from 'next/head';
 import React from 'react';
 import config from '../../config.json';
-import { Input } from '../components/input';
-import { useHistory } from '../components/history/hook';
-import { History } from '../components/history/History';
-import { banner } from '../utils/bin';
+import Terminal from '../components/terminal';
 
-interface IndexPageProps {
-  inputRef: React.MutableRefObject<HTMLInputElement>;
-}
+const IndexPage: React.FC = () => {
+    const inputRef = React.useRef<HTMLInputElement>(null);
 
-const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
-  const containerRef = React.useRef(null);
-  const {
-    history,
-    command,
-    lastCommandIndex,
-    setCommand,
-    setHistory,
-    clearHistory,
-    setLastCommandIndex,
-  } = useHistory([]);
+    const onClickAnywhere = () => {
+        inputRef.current.focus();
+    };
 
-  const init = React.useCallback(() => setHistory(banner()), []);
+    return (
+        <>
+            <Head>
+                <title>{config.title}</title>
+            </Head>
 
-  React.useEffect(() => {
-    init();
-  }, [init]);
-
-  React.useEffect(() => {
-    if (inputRef.current) {
-      inputRef.current.scrollIntoView();
-      inputRef.current.focus({ preventScroll: true });
-    }
-  }, [history]);
-
-  return (
-    <>
-      <Head>
-        <title>{config.title}</title>
-      </Head>
-
-      <div className="flex flex-col h-full">
-        <div className=" mb-2 pl-3 pt-5 pb-5 border-2 rounded dark:border-dark-red">
-          Navigation
-        </div>
-        <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
-          <div ref={containerRef} className="overflow-y-auto h-full">
-            <History history={history} />
-
-            <Input
-              inputRef={inputRef}
-              containerRef={containerRef}
-              command={command}
-              history={history}
-              lastCommandIndex={lastCommandIndex}
-              setCommand={setCommand}
-              setHistory={setHistory}
-              setLastCommandIndex={setLastCommandIndex}
-              clearHistory={clearHistory}
-            />
-          </div>
-        </div>
-      </div>
-    </>
-  );
+            <div onClick={onClickAnywhere} className="flex flex-col h-full">
+                <Terminal inputRef={inputRef} />
+            </div>
+        </>
+    );
 };
 
 export default IndexPage;
