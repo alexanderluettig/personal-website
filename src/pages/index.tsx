@@ -16,7 +16,10 @@ const IndexPage: React.FC = () => {
                 <title>{config.title}</title>
             </Head>
 
-            <div onClick={onClickAnywhere} className="flex flex-col h-full">
+            <div
+                onClick={onClickAnywhere}
+                className="overflow-hidden flex flex-col h-full"
+            >
                 <Terminal inputRef={inputRef} />
             </div>
         </>
