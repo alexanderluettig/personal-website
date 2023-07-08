@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/global.css';
 import Head from 'next/head';
-import Navigation from '../components/navbar';
+import Navigation from '../components/navigation/navbar';
 
 const App = ({ Component, pageProps }) => {
     return (
