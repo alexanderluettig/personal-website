@@ -3,6 +3,10 @@
     "readmeUrl": "",
     "title": "Alexander Lüttig",
     "name": "Alexander Lüttig",
+    "birthdate": "March 4, 1999",
+    "location": "Germany",
+    "languages": ["German", "English"],
+    "occupation": "Software Engineer",
     "ascii": "Alexander Luettig",
     "social": {
         "github": "alexanderluettig"

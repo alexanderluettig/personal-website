@@ -9,7 +9,9 @@ const Navigation: React.FC = () => {
     return (
         <div className="h-[100px] flex flex-row justify-between items-center mb-2 pl-3 pt-5 pb-5 border-2 rounded dark:border-dark-red">
             <div className="flex flex-row items-center">
-                <span className="mr-5 ml-5">Logo</span>
+                <Link href="/">
+                    <span className="mr-5 ml-5">Logo</span>
+                </Link>
                 {isIndex ? <IndexToggle /> : ''}
             </div>
             <div className="w-[50%]">
