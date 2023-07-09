@@ -1,6 +1,16 @@
+import Head from 'next/head';
+
 const Blog = () => {
     return (
-        <div className="h-full border-2 rounded border-dark-yellow">Blog</div>
+        <>
+            <Head>
+                <title>Blog</title>
+            </Head>
+
+            <div className="h-full border-2 rounded border-dark-yellow">
+                Blog
+            </div>
+        </>
     );
 };
 

@@ -1,8 +1,16 @@
+import Head from 'next/head';
+
 const Contact: React.FC = () => {
     return (
-        <div className="h-full border-2 rounded border-dark-yellow">
-            Contact
-        </div>
+        <>
+            <Head>
+                <title>Contact</title>
+            </Head>
+
+            <div className="h-full border-2 rounded border-dark-yellow">
+                Contact
+            </div>
+        </>
     );
 };
 

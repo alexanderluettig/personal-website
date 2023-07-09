@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import config from '../../config.json';
 import Terminal from '../components/terminal';
 import { useRouter } from 'next/router';
 import WebsiteView from '../components/websiteView';
@@ -18,7 +17,7 @@ const IndexPage: React.FC = () => {
     return (
         <>
             <Head>
-                <title>{config.title}</title>
+                <title>Home</title>
             </Head>
 
             <div className="overflow-hidden flex flex-col h-full">
