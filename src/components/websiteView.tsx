@@ -3,10 +3,10 @@ import config from '../../config.json';
 
 const WebsiteView: React.FC = () => {
     return (
-        <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
+        <div className="p-8 overflow-hidden h-full border-2 rounded border-dark-yellow">
             <div className="overflow-hidden overflow-y-auto w-full h-full flex flex-row justify-center items-center">
                 <div className="min-w-[40%] flex flex-col items-center justify-center">
-                    <div>Logo</div>
+                    <div>Image</div>
                 </div>
                 <div className="w-full h-full flex flex-col items-center space-y-3">
                     <div>
@@ -49,14 +49,14 @@ const WebsiteView: React.FC = () => {
                         <p>
                             More about me on the
                             <Link href="/about">
-                                <span className="hover:text-light-yellow dark:hover:text-dark-yellow">
+                                <span className="hover:text-dark-yellow">
                                     {' '}
                                     <span className="border-b-[1px]">
                                         About
                                     </span>{' '}
                                 </span>
                             </Link>
-                            Page.
+                            Page
                         </p>
                     </div>
                 </div>

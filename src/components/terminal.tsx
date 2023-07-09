@@ -34,7 +34,7 @@ const Terminal: React.FC<TerminalPageProps> = ({ inputRef }) => {
     }, [history]);
 
     return (
-        <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
+        <div className="p-8 overflow-hidden h-full border-2 rounded border-dark-yellow">
             <div ref={containerRef} className="overflow-y-auto h-full">
                 <History history={history} />
 
