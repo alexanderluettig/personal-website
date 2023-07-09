@@ -51,7 +51,9 @@ const WebsiteView: React.FC = () => {
                             <Link href="/about">
                                 <span className="hover:text-light-yellow dark:hover:text-dark-yellow">
                                     {' '}
-                                    About{' '}
+                                    <span className="border-b-[1px]">
+                                        About
+                                    </span>{' '}
                                 </span>
                             </Link>
                             Page.

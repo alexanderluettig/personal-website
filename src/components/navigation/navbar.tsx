@@ -18,8 +18,8 @@ const Navigation: React.FC = () => {
                 {isIndex ? <IndexToggle /> : ''}
             </div>
             <div className="w-[50%]">
-                <ul className="w-full flex flex-row justify-between [&>*]:mr-[20px] [&>*]:hover:cursor-pointer">
-                    <li>
+                <ul className="w-full flex flex-row justify-between [&>li]:mr-[20px] [&>li]:pb-1 [&>li]:hover:cursor-pointer [&>li]:border-b-2">
+                    <li className="hover:text-dark-yellow">
                         <Link href={'/'}>
                             <span className="flex flex-row">
                                 <BiHomeAlt2 size={20} className="mr-2" />
@@ -27,7 +27,7 @@ const Navigation: React.FC = () => {
                             </span>
                         </Link>
                     </li>
-                    <li>
+                    <li className="hover:text-dark-yellow">
                         <Link href={'/about'}>
                             <span className="flex flex-row">
                                 <BsFilePerson size={20} className="mr-2" />
@@ -35,7 +35,7 @@ const Navigation: React.FC = () => {
                             </span>
                         </Link>
                     </li>
-                    <li>
+                    <li className="hover:text-dark-yellow">
                         <Link href="/projects">
                             <span className="flex flex-row">
                                 <BsCodeSquare size={20} className="mr-2" />
@@ -43,7 +43,7 @@ const Navigation: React.FC = () => {
                             </span>
                         </Link>
                     </li>
-                    <li>
+                    <li className="hover:text-dark-yellow">
                         <Link href="/blog">
                             <span className="flex flex-row">
                                 <BsVectorPen size={20} className="mr-2" />
@@ -51,7 +51,7 @@ const Navigation: React.FC = () => {
                             </span>
                         </Link>
                     </li>
-                    <li>
+                    <li className="hover:text-dark-yellow">
                         <Link href="/contact">
                             <span className="flex flex-row">
                                 <MdOutlineMailOutline
