@@ -1,6 +1,9 @@
 import { useRouter } from 'next/router';
 import IndexToggle from './indexToggle';
 import Link from 'next/link';
+import { BiHomeAlt2 } from 'react-icons/bi';
+import { BsCodeSquare, BsFilePerson, BsVectorPen } from 'react-icons/bs';
+import { MdOutlineMailOutline } from 'react-icons/md';
 
 const Navigation: React.FC = () => {
     var router = useRouter();
@@ -8,27 +11,57 @@ const Navigation: React.FC = () => {
 
     return (
         <div className="h-[100px] flex flex-row justify-between items-center mb-2 pl-3 pt-5 pb-5 border-2 rounded dark:border-dark-red">
-            <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center hover:cursor-pointer">
                 <Link href="/">
                     <span className="mr-5 ml-5">Logo</span>
                 </Link>
                 {isIndex ? <IndexToggle /> : ''}
             </div>
             <div className="w-[50%]">
-                <ul className="w-full flex flex-row justify-between [&>*]:mr-[20px]">
+                <ul className="w-full flex flex-row justify-between [&>*]:mr-[20px] [&>*]:hover:cursor-pointer">
                     <li>
-                        <Link href={'/'}>Home</Link>
+                        <Link href={'/'}>
+                            <span className="flex flex-row">
+                                <BiHomeAlt2 size={20} className="mr-2" />
+                                Home
+                            </span>
+                        </Link>
                     </li>
                     <li>
-                        <Link href={'/about'}>About</Link>
+                        <Link href={'/about'}>
+                            <span className="flex flex-row">
+                                <BsFilePerson size={20} className="mr-2" />
+                                About
+                            </span>
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/projects">Projects</Link>
+                        <Link href="/projects">
+                            <span className="flex flex-row">
+                                <BsCodeSquare size={20} className="mr-2" />
+                                Projects
+                            </span>
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/blog">
+                            <span className="flex flex-row">
+                                <BsVectorPen size={20} className="mr-2" />
+                                Blog
+                            </span>
+                        </Link>
                     </li>
-                    <li>Contact</li>
+                    <li>
+                        <Link href="/contact">
+                            <span className="flex flex-row">
+                                <MdOutlineMailOutline
+                                    size={20}
+                                    className="mr-2"
+                                />
+                                Contact
+                            </span>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -4,7 +4,7 @@ import config from '../../config.json';
 const WebsiteView: React.FC = () => {
     return (
         <div className="p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
-            <div className="w-full h-[80%] flex flex-row justify-center items-center">
+            <div className="overflow-hidden overflow-y-auto w-full h-full flex flex-row justify-center items-center">
                 <div className="min-w-[40%] flex flex-col items-center justify-center">
                     <div>Logo</div>
                 </div>
@@ -59,7 +59,6 @@ const WebsiteView: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div>Links</div>
         </div>
     );
 };
