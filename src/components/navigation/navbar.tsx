@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { BsCodeSquare, BsFilePerson, BsVectorPen } from 'react-icons/bs';
 import { MdOutlineMailOutline } from 'react-icons/md';
+import Logo from '../logo';
 
 const Navigation: React.FC = () => {
     var router = useRouter();
@@ -13,7 +14,14 @@ const Navigation: React.FC = () => {
         <div className="h-[100px] flex flex-row justify-between items-center mb-2 pl-3 pt-5 pb-5 border-2 rounded border-dark-red">
             <div className="flex flex-row items-center hover:cursor-pointer">
                 <Link href="/">
-                    <span className="mr-5 ml-5">Logo</span>
+                    <span className="mr-5 ml-5">
+                        <Logo
+                            color="white"
+                            height={200}
+                            width={100}
+                            className="mr-6"
+                        />
+                    </span>
                 </Link>
                 {isIndex ? <IndexToggle /> : ''}
             </div>
