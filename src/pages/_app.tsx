@@ -14,7 +14,7 @@ const App = ({ Component, pageProps }) => {
                     maximum-scale="1"
                 />
             </Head>
-            <div className="text-dark-foreground min-w-max text-xs md:min-w-full md:text-base">
+            <div className="text-dark-foreground text-xs md:min-w-full md:text-base">
                 <main className="flex flex-col bg-dark-background w-full h-full p-2">
                     <Navigation />
                     <Component {...pageProps} />

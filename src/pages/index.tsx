@@ -20,11 +20,11 @@ const IndexPage: React.FC = () => {
                 <title>Home</title>
             </Head>
 
-            <div className="overflow-hidden flex flex-col h-full">
+            <div className="overflow-hidden h-full">
                 {view === 'terminal' ? (
                     <div
                         onClick={onClickAnywhere}
-                        className="overflow-hidden h-full"
+                        className="overflow-hidden flex flex-col h-full"
                     >
                         <Terminal inputRef={inputRef} />
                     </div>

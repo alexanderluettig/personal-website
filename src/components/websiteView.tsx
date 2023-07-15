@@ -3,12 +3,12 @@ import config from '../../config.json';
 
 const WebsiteView: React.FC = () => {
     return (
-        <div className="p-8 overflow-hidden h-full border-2 rounded border-dark-yellow">
-            <div className="overflow-hidden overflow-y-auto w-full h-full flex flex-row justify-center items-center">
+        <div className="p-8 overflow-hidden overflow-y-scroll h-full border-2 rounded border-dark-yellow">
+            <div className=" h-full flex flex-row justify-center items-center">
                 <div className="min-w-[40%] flex flex-col items-center justify-center">
                     <div>Image</div>
                 </div>
-                <div className="w-full h-full flex flex-col items-center space-y-3">
+                <div className="h-full flex flex-col items-center space-y-3">
                     <div>
                         <p>
                             Velit fugiat aliquip tempor Lorem in fugiat. Eiusmod

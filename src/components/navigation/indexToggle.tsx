@@ -15,7 +15,7 @@ const IndexToggle: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-row border-2 rounded-2xl border-light-yellow p-0 overflow-hidden [&>div]:hover:cursor-pointer">
+        <div className="hidden medium:flex flex-row border-2 rounded-2xl border-light-yellow p-0 overflow-hidden [&>div]:hover:cursor-pointer">
             <div
                 className={`flex flex-row p-2 border-2 border-transparent rounded transition [&>*]:mr-2 ${
                     active === 'website' ? 'bg-light-foreground' : ''

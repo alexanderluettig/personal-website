@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
     var isIndex = router.pathname === '/';
 
     return (
-        <div className="h-[100px] flex flex-row justify-between items-center mb-2 pl-3 pt-5 pb-5 border-2 rounded border-dark-red">
+        <div className="overflow-hidden h-[100px] flex flex-row justify-between items-center mb-2 pl-3 pt-5 pb-5 border-2 rounded border-dark-red">
             <div className="flex flex-row items-center hover:cursor-pointer">
                 <Link href="/">
                     <span className="mr-5 ml-5">
@@ -25,7 +25,7 @@ const Navigation: React.FC = () => {
                 </Link>
                 {isIndex ? <IndexToggle /> : ''}
             </div>
-            <div className="w-[50%]">
+            <div className="">
                 <ul className="w-full flex flex-row justify-between [&>li]:mr-[20px] [&>li]:pb-1 [&>li]:hover:cursor-pointer [&>li]:border-b-2">
                     <li className="hover:text-dark-yellow">
                         <Link href={'/'}>
