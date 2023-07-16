@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { getProjects } from '../../utils/api';
 import ProjectView from '../../components/projectView';
+import SearchBar from '../../components/searchbar';
 
 export interface Project {
     name: string;
@@ -12,6 +13,31 @@ export interface Project {
 
 const Projects: React.FC = () => {
     var [projects, setProjects] = useState([]);
+    var [searchQuery, setSearchQuery] = useState('');
+
+    const satisfiesSearchQuery = (project: Project): boolean => {
+        if (searchQuery === '') return true;
+
+        if (!searchQuery.includes(':')) {
+            return (
+                project.name.includes(searchQuery) ||
+                project.description.includes(searchQuery)
+            );
+        }
+
+        const query = searchQuery.split(':');
+        const type = query[0];
+        const value = query[1];
+
+        if (type === 'title') {
+            return project.name.includes(value);
+        } else if (type === 'description') {
+            return project.description.includes(value);
+        } else {
+            return false;
+        }
+    };
+
     useEffect(() => {
         const fetchData = async () => {
             return await getProjects();
@@ -39,11 +65,20 @@ const Projects: React.FC = () => {
                 <title>Projects</title>
             </Head>
 
-            <div className="h-full w-full border-2 rounded border-dark-yellow">
-                <div className="flex flex-row flex-wrap justify-around">
-                    {projects.map((project: Project, i: number) => {
-                        return <ProjectView key={i} project={project} />;
-                    })}
+            <div className="h-full w-full border-2 rounded border-dark-yellow pl-10 pr-10">
+                <div className="m-3 flex items-center justify-center">
+                    <SearchBar
+                        callback={setSearchQuery}
+                        placeholderText="Enter a search query (eg. title:website or description:website)"
+                    />
+                </div>
+                <div className="m-3 flex flex-row flex-wrap gap-x-14 gap-y-5">
+                    {projects
+                        .filter(satisfiesSearchQuery)
+                        .sort((a: Project, b: Project) => b.stars - a.stars)
+                        .map((project: Project, i: number) => {
+                            return <ProjectView key={i} project={project} />;
+                        })}
                 </div>
             </div>
         </>
