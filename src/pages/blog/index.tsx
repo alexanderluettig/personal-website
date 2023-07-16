@@ -56,6 +56,7 @@ const Blog = ({ years }: InferGetStaticPropsType<typeof getStaticProps>) => {
         if (query.includes('year:')) {
             const year = query.split(':')[1];
             setFilteredYears(year.split(',').map((year) => +year));
+            setSearchQuery('');
         } else {
             setFilteredYears(Object.keys(years).map((year) => +year));
             setSearchQuery(query);
