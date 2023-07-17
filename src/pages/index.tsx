@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import React from 'react';
-import Terminal from '../components/terminal';
+import Terminal from '../components/home/terminal';
 import { useRouter } from 'next/router';
-import WebsiteView from '../components/websiteView';
+import WebsiteView from '../components/home/websiteView';
 
 const IndexPage: React.FC = () => {
     const inputRef = React.useRef<HTMLInputElement>(null);

@@ -1,7 +1,7 @@
-import { Input } from '../components/input';
-import { useHistory } from '../components/history/hook';
-import { History } from '../components/history/History';
-import { banner } from '../utils/bin';
+import { Input } from './input';
+import { useHistory } from '../history/hook';
+import { History } from '../history/History';
+import { banner } from '../../utils/bin';
 import React from 'react';
 
 interface TerminalPageProps {

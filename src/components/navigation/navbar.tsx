@@ -14,32 +14,32 @@ const Navigation: React.FC = () => {
         <div className="overflow-hidden h-[100px] flex flex-row justify-between items-center mb-2 pl-3 pt-5 pb-5 border-2 rounded border-dark-red">
             <div className="flex flex-row items-center hover:cursor-pointer">
                 <Link href="/">
-                    <span className="mr-5 ml-5">
+                    <span className="">
                         <Logo
                             color="white"
                             height={200}
                             width={100}
-                            className="mr-6"
+                            className="scale-75 sm:scale-100 mr-6 sm:ml-5"
                         />
                     </span>
                 </Link>
                 {isIndex ? <IndexToggle /> : ''}
             </div>
-            <div className="">
-                <ul className="w-full flex flex-row justify-between [&>li]:mr-[20px] [&>li]:pb-1 [&>li]:hover:cursor-pointer [&>li]:border-b-2">
+            <div>
+                <ul className="w-full flex flex-row justify-between [&>li]:mr-[20px] [&>li]:pb-1 [&>li]:hover:cursor-pointer sm:[&>li]:border-b-2">
                     <li className="hover:text-dark-yellow">
                         <Link href={'/'}>
-                            <span className="flex flex-row">
+                            <div className="flex flex-row">
                                 <BiHomeAlt2 size={20} className="mr-2" />
-                                Home
-                            </span>
+                                <div className="hidden sm:block">Home</div>
+                            </div>
                         </Link>
                     </li>
                     <li className="hover:text-dark-yellow">
                         <Link href={'/about'}>
                             <span className="flex flex-row">
                                 <BsFilePerson size={20} className="mr-2" />
-                                About
+                                <span className="hidden sm:block">About</span>
                             </span>
                         </Link>
                     </li>
@@ -47,7 +47,9 @@ const Navigation: React.FC = () => {
                         <Link href="/projects">
                             <span className="flex flex-row">
                                 <BsCodeSquare size={20} className="mr-2" />
-                                Projects
+                                <span className="hidden sm:block">
+                                    Projects
+                                </span>
                             </span>
                         </Link>
                     </li>
@@ -55,7 +57,7 @@ const Navigation: React.FC = () => {
                         <Link href="/blog">
                             <span className="flex flex-row">
                                 <BsVectorPen size={20} className="mr-2" />
-                                Blog
+                                <span className="hidden sm:block">Blog</span>
                             </span>
                         </Link>
                     </li>
@@ -66,7 +68,7 @@ const Navigation: React.FC = () => {
                                     size={20}
                                     className="mr-2"
                                 />
-                                Contact
+                                <span className="hidden sm:block">Contact</span>
                             </span>
                         </Link>
                     </li>

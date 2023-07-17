@@ -1,6 +1,6 @@
 import React from 'react';
 import { History as HistoryInterface } from './interface';
-import { Ps1 } from '../Ps1';
+import { Ps1 } from '../home/Ps1';
 
 export const History: React.FC<{ history: Array<HistoryInterface> }> = ({
     history,
