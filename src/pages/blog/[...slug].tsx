@@ -2,8 +2,8 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import fs from 'fs';
 import matter from 'gray-matter';
-import { Remark } from 'react-remark';
-import torchlight from 'remark-torchlight';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export interface PostSlugProps extends ParsedUrlQuery {
     title: string;
@@ -72,7 +72,9 @@ const BlogPost = ({
                 <h2 className="text-center">{date}</h2>
             </div>
             <article className="prose-invert prose-sm prose-headings:text-center prose-img:mx-auto">
-                <Remark remarkPlugins={[torchlight]}>{content}</Remark>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {content}
+                </ReactMarkdown>
             </article>
         </div>
     );
