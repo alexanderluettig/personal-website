@@ -2,7 +2,9 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import fs from 'fs';
 import matter from 'gray-matter';
-import Markdown from 'markdown-to-jsx';
+import { Remark } from 'react-remark';
+import torchlight from 'remark-torchlight';
+import remarkGfm from 'remark-gfm';
 
 export interface PostSlugProps extends ParsedUrlQuery {
     title: string;
@@ -13,6 +15,7 @@ export interface PostProps {
     title: string;
     year: string;
     content: string;
+    date: string;
 }
 
 export const getStaticProps: GetStaticProps<PostProps> = async ({
@@ -30,9 +33,10 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({
 
     return {
         props: {
-            title: title,
+            title: matterResult.data.title,
             year: year,
             content: matterResult.content,
+            date: matterResult.data.date,
         },
     };
 };
@@ -59,10 +63,18 @@ export const getStaticPaths: GetStaticPaths<PostSlugProps> = async () => {
 
 const BlogPost = ({
     content,
+    date,
+    title,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
-        <div>
-            <Markdown>{content}</Markdown>
+        <div className="h-full w-full overflow-hidden overflow-y-scroll border-2 rounded border-dark-yellow p-10">
+            <div className="mb-5">
+                <h1 className="text-center text-4xl font-bold">{title}</h1>
+                <h2 className="text-center">{date}</h2>
+            </div>
+            <article className="prose-invert prose-sm prose-headings:text-center prose-img:mx-auto">
+                <Remark remarkPlugins={[torchlight]}>{content}</Remark>
+            </article>
         </div>
     );
 };
