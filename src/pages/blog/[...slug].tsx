@@ -4,6 +4,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import Head from 'next/head';
 
 export interface PostSlugProps extends ParsedUrlQuery {
     title: string;
@@ -66,17 +67,22 @@ const BlogPost = ({
     title,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
     return (
-        <div className="h-full w-full overflow-hidden overflow-y-scroll border-2 rounded border-dark-yellow p-10">
-            <div className="mb-5">
-                <h1 className="text-center text-4xl font-bold">{title}</h1>
-                <h2 className="text-center">{date}</h2>
+        <>
+            <Head>
+                <title>{title}</title>
+            </Head>
+            <div className="h-full w-full overflow-hidden overflow-y-scroll border-2 rounded border-dark-yellow p-10">
+                <div className="mb-5">
+                    <h1 className="text-center text-4xl font-bold">{title}</h1>
+                    <h2 className="text-center">{date}</h2>
+                </div>
+                <article className="prose-invert prose-sm prose-headings:text-center prose-img:mx-auto">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {content}
+                    </ReactMarkdown>
+                </article>
             </div>
-            <article className="prose-invert prose-sm prose-headings:text-center prose-img:mx-auto">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                    {content}
-                </ReactMarkdown>
-            </article>
-        </div>
+        </>
     );
 };
 
