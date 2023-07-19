@@ -4,7 +4,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { Remark } from 'react-remark';
 import torchlight from 'remark-torchlight';
-import remarkGfm from 'remark-gfm';
 
 export interface PostSlugProps extends ParsedUrlQuery {
     title: string;
