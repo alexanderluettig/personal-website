@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './syntax-highlighting.css';
+
 @font-face {
     font-family: 'Hack';
     src: url(/assets/fonts/Hack-NF.ttf);

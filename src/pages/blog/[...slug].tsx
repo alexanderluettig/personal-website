@@ -2,9 +2,11 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 import fs from 'fs';
 import matter from 'gray-matter';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import Head from 'next/head';
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import { serialize } from 'next-mdx-remote/serialize';
+import rehypeCodeTitles from 'rehype-code-titles';
+import rehypePrism from 'rehype-prism-plus';
 
 export interface PostSlugProps extends ParsedUrlQuery {
     title: string;
@@ -14,7 +16,7 @@ export interface PostSlugProps extends ParsedUrlQuery {
 export interface PostProps {
     title: string;
     year: string;
-    content: string;
+    content: MDXRemoteSerializeResult;
     date: string;
 }
 
@@ -31,11 +33,19 @@ export const getStaticProps: GetStaticProps<PostProps> = async ({
     const content = fs.readFileSync(file, 'utf8');
     const matterResult = matter(content);
 
+    const mdxSource = await serialize(matterResult.content, {
+        mdxOptions: {
+            remarkPlugins: [],
+            rehypePlugins: [rehypeCodeTitles, rehypePrism],
+        },
+        scope: matterResult.data,
+    });
+
     return {
         props: {
             title: matterResult.data.title,
             year: year,
-            content: matterResult.content,
+            content: mdxSource,
             date: matterResult.data.date,
         },
     };
@@ -77,9 +87,7 @@ const BlogPost = ({
                     <h2 className="text-center">{date}</h2>
                 </div>
                 <article className="prose-invert prose-sm prose-headings:text-center prose-img:mx-auto">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                        {content}
-                    </ReactMarkdown>
+                    <MDXRemote {...content} />
                 </article>
             </div>
         </>
