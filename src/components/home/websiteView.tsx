@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import config from '../../../config.json';
 
 const WebsiteView: React.FC = () => {
@@ -6,7 +7,12 @@ const WebsiteView: React.FC = () => {
         <div className="p-8 overflow-hidden overflow-y-scroll h-full border-2 rounded border-dark-yellow">
             <div className=" h-full flex flex-row justify-center items-center">
                 <div className="min-w-[40%] flex flex-col items-center justify-center">
-                    <div>Image</div>
+                    <Image
+                        src="/assets/images/profilbild-compressed.png"
+                        width={650}
+                        height={700}
+                        alt="image of me"
+                    />
                 </div>
                 <div className="h-full flex flex-col items-center space-y-3">
                     <div>
