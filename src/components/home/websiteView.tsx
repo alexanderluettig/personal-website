@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import config from '../../../config.json';
 
 const WebsiteView: React.FC = () => {
     return (
@@ -15,54 +14,78 @@ const WebsiteView: React.FC = () => {
                     />
                 </div>
                 <div className="h-full flex flex-col items-center space-y-3">
-                    <div>
+                    <div className="h-full flex items-center">
                         <p>
-                            Velit fugiat aliquip tempor Lorem in fugiat. Eiusmod
-                            veniam nostrud officia qui pariatur sint eu deserunt
-                            non non pariatur consequat. Quis reprehenderit non
-                            pariatur esse tempor ipsum aliqua ex reprehenderit
-                            et proident laborum. Dolore in quis tempor ea est
-                            mollit amet sunt Lorem fugiat aute elit Lorem. Eu
-                            qui reprehenderit magna irure ad irure labore
-                            deserunt aute nostrud nisi ut pariatur. Cillum
-                            proident exercitation anim commodo aute minim nulla
-                            dolore enim nostrud pariatur occaecat do
-                            reprehenderit. Quis reprehenderit culpa ex cupidatat
-                            et exercitation.In elit enim ullamco do veniam duis
-                            id dolor Lorem velit proident. Id nostrud excepteur
-                            exercitation dolor tempor minim exercitation esse
-                            incididunt exercitation enim minim. Amet officia
-                            dolore veniam exercitation fugiat ipsum do do. Velit
-                            Lorem laborum duis ut anim sunt laborum elit aliqua
-                            culpa nostrud sit. Nulla dolore labore fugiat
-                            proident id aute commodo excepteur aliquip Lorem
-                            incididunt deserunt irure. Dolore pariatur ut ea
-                            nostrud laborum non magna ipsum est ea. Duis do
-                            exercitation dolore do.
-                        </p>
-                    </div>
-                    <div className="space-y-4">
-                        <p>Name: {config.name}</p>
-                        <p>
-                            Age:{' '}
-                            {unixTimeToYears(
-                                Date.now() - Date.parse(config.birthdate),
-                            )}
-                        </p>
-                        <p>Location: {config.location}</p>
-                        <p>Languages: {config.languages.join(', ')}</p>
-                        <p>Occupation: {config.occupation}</p>
-                        <p>
-                            More about me on the
-                            <Link href="/about">
-                                <span className="hover:text-dark-yellow">
-                                    {' '}
-                                    <span className="border-b-[1px]">
-                                        About
-                                    </span>{' '}
-                                </span>
-                            </Link>
-                            Page
+                            <p>
+                                Hey Ho, I&apos;m Alex, a passionate software
+                                developer with a deep affinity for everything
+                                related to backend development. My journey into
+                                the world of computer science began early in my
+                                school days, where I discovered a fascination
+                                for creative problem-solving - a contrast to
+                                mathematics, which is also a great passion of
+                                mine.
+                            </p>
+                            <br />
+                            <p>
+                                After graduating from high school, I initially
+                                started studying mathematics but soon realized
+                                that my true calling was in computer science.
+                                During my studies, I gained experience in
+                                various areas of software development, such as
+                                testing and project management. However, my
+                                heart beat stronger for software development
+                                itself, which I have now been doing
+                                professionally for nearly two years.
+                            </p>
+                            <br />
+                            <p>
+                                My main interest is in backend development.
+                                Here, I am fascinated by everything around data,
+                                databases, and web APIs. My drive is the
+                                continuous learning and deepening of my skills,
+                                particularly in C# and the ASP.NET Core
+                                environment. I strive to always do my best job,
+                                while being open to mistakes because I believe
+                                you learn the most when you remain human and
+                                allow for errors.
+                            </p>
+                            <br />
+                            <p>
+                                On my website, in the
+                                <Link href="/projects">
+                                    <span className="hover:text-dark-yellow">
+                                        {' '}
+                                        <span className="border-b-[1px]">
+                                            Projects
+                                        </span>{' '}
+                                    </span>
+                                </Link>
+                                section, you can find various projects I have
+                                realized. These range from learning projects to
+                                real, practical applications. My goal is to
+                                become an expert in the field of backend
+                                development – a long but exciting journey on
+                                which I am constantly educating myself.
+                            </p>
+                            <br />
+                            <p>
+                                Besides my professional passion, I am also
+                                immersed in the world of technology and
+                                creativity in my private life. I program a lot
+                                in my free time, play video games, watch anime,
+                                and am trying my hand at music production. I am
+                                also an avid reader, especially of non-fiction
+                                books.
+                            </p>
+                            <br />
+                            <p>
+                                Through my website, I aim to share my journey in
+                                the world of software development, impart my
+                                knowledge, and connect with like-minded
+                                individuals. I look forward to sharing my
+                                passion and experiences with you!
+                            </p>
                         </p>
                     </div>
                 </div>
@@ -70,9 +93,5 @@ const WebsiteView: React.FC = () => {
         </div>
     );
 };
-
-function unixTimeToYears(unixTime: number): number {
-    return Math.floor(unixTime / 31556952000);
-}
 
 export default WebsiteView;
