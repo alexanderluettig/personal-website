@@ -36,7 +36,7 @@ const WebsiteView: React.FC = () => {
                                 testing and project management. However, my
                                 heart beat stronger for software development
                                 itself, which I have now been doing
-                                professionally for nearly two years.
+                                professionally since the end of 2021.
                             </p>
                             <br />
                             <p>
