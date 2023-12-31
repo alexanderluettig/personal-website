@@ -45,10 +45,7 @@ const WebsiteView: React.FC = () => {
                                 databases, and web APIs. My drive is the
                                 continuous learning and deepening of my skills,
                                 particularly in C# and the ASP.NET Core
-                                environment. I strive to always do my best job,
-                                while being open to mistakes because I believe
-                                you learn the most when you remain human and
-                                allow for errors.
+                                environment.
                             </p>
                             <br />
                             <p>
