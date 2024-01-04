@@ -8,6 +8,7 @@
     font-family: 'Hack';
     src: url(/assets/fonts/Hack-NF.ttf);
     display: swap;
+    font-display: swap;
 }
 
 * {
