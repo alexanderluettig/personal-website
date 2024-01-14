@@ -14,7 +14,7 @@ const WebsiteView: React.FC = () => {
                     />
                 </div>
                 <div className="overflow-hidden overflow-y-auto h-full flex justify-center space-y-3 mr-2">
-                    <p className="pr-6 pl-8">
+                    <div className="pr-6 pl-8">
                         <p>
                             Hey Ho, I&apos;m Alex, a passionate software
                             developer with a deep affinity for everything
@@ -78,7 +78,7 @@ const WebsiteView: React.FC = () => {
                             forward to sharing my passion and experiences with
                             you!
                         </p>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

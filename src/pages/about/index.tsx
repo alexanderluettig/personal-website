@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import config from '../../../config.json';
+import Timeline from '../../components/timeline/timeline';
 
 const About: React.FC = () => {
     return (
@@ -9,7 +9,8 @@ const About: React.FC = () => {
                 <title>About</title>
             </Head>
 
-            <div className="h-full border-2 rounded border-dark-yellow p-10">
+            <div className="h-full w-full overflow-hidden overflow-y-auto flex border-2 rounded border-dark-yellow p-8 space-x-5">
+                <Timeline />
                 <div className="space-y-4">
                     <p>Name: {config.name}</p>
                     <p>
