@@ -20,8 +20,8 @@ const Projects: React.FC = () => {
 
         if (!searchQuery.includes(':')) {
             return (
-                project.name.includes(searchQuery) ||
-                project.description.includes(searchQuery)
+                project.name?.includes(searchQuery) ||
+                project.description?.includes(searchQuery)
             );
         }
 
@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
                 <title>Projects</title>
             </Head>
 
-            <div className="h-full w-full border-2 rounded border-dark-yellow pl-10 pr-10">
+            <div className="overflow-hidden overflow-y-auto h-full w-full border-2 rounded border-dark-yellow pl-10 pr-10">
                 <div className="m-3 flex items-center justify-center">
                     <SearchBar
                         callback={setSearchQuery}

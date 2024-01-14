@@ -16,7 +16,8 @@ const ProjectView: React.FC<ProjectViewProps> = ({ project }) => {
                             {project.stars} stars
                         </h2>
                     </div>
-                    <p className="">{project.description}</p>
+                    <hr className="w-[75%] m-auto border-light-yellow" />
+                    <p className="pt-3">{project.description}</p>
                 </span>
             </Link>
         </div>
