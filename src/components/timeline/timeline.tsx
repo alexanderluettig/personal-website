@@ -32,7 +32,7 @@ const timeLineElements = [
 const Timeline: React.FC<TimelineProps> = () => {
     return (
         <div className="w-[40%] h-full flex flex-col overflow-hidden overflow-y-auto">
-            {timeLineElements.map((element, index) => {
+            {timeLineElements.reverse().map((element, index) => {
                 return (
                     <div key={index} className="flex flex-row">
                         <div className={styles.timelineMiddle}>
