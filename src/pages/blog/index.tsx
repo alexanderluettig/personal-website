@@ -16,8 +16,8 @@ export const getStaticProps: GetStaticProps<{
     years: PostByYears;
 }> = async () => {
     const folder = './data/blog-posts';
-    const paths = fs.readdirSync(folder);
-    paths.filter((path) => fs.existsSync(folder + '/' + path));
+    let paths = fs.readdirSync(folder);
+    paths = paths.filter((path) => fs.existsSync(folder + '/' + path));
 
     const posts: PostByYears = {};
     paths.forEach((year) => {
