@@ -13,6 +13,7 @@ const App = ({ Component, pageProps }) => {
                     key="viewport"
                     maximum-scale="1"
                 />
+                <meta name="author" content="Alexander Lüttig" />
             </Head>
             <div className="text-dark-foreground text-xs md:min-w-full md:text-base">
                 <main className="flex flex-col bg-dark-background w-full h-full p-2">

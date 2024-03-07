@@ -18,6 +18,10 @@ const IndexPage: React.FC = () => {
         <>
             <Head>
                 <title>Home</title>
+                <meta
+                    name="description"
+                    content="Hey there! Welcome to my little corner of the internet. Here, I share my journey through tech and software development, my projects, and all things coding that catch my eye. Dive in and see what I'm all about!"
+                />
             </Head>
 
             <div className="overflow-hidden h-full">

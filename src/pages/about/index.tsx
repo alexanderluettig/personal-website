@@ -7,6 +7,10 @@ const About: React.FC = () => {
         <>
             <Head>
                 <title>About</title>
+                <meta
+                    name="description"
+                    content="I am Alexander Lüttig, a passionate software developer and technology enthusiast. My dedication to backend development and problem-solving has shaped my career and interests. Discover my story, skills, and the motivations that fuel my quest for deep knowledge in software development."
+                />
             </Head>
 
             <div className="h-full w-full overflow-hidden sm:flex overflow-y-auto border-2 rounded border-dark-yellow p-8 space-x-5 space-y-5">
