@@ -9,9 +9,8 @@ const About: React.FC = () => {
                 <title>About</title>
             </Head>
 
-            <div className="h-full w-full overflow-hidden overflow-y-auto flex border-2 rounded border-dark-yellow p-8 space-x-5">
-                <Timeline />
-                <div className="space-y-4">
+            <div className="h-full w-full overflow-hidden sm:flex overflow-y-auto border-2 rounded border-dark-yellow p-8 space-x-5 space-y-5">
+                <div className="space-y-4 sm:w-[60%]">
                     <p>Name: {config.name}</p>
                     <p>
                         Age:{' '}
@@ -23,6 +22,7 @@ const About: React.FC = () => {
                     <p>Languages: {config.languages.join(', ')}</p>
                     <p>Occupation: {config.occupation}</p>
                 </div>
+                <Timeline />
             </div>
         </>
     );

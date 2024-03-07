@@ -1,4 +1,3 @@
-import { time } from 'console';
 import styles from './timeline.module.css';
 
 interface TimelineProps {}
@@ -31,7 +30,7 @@ const timeLineElements = [
 
 const Timeline: React.FC<TimelineProps> = () => {
     return (
-        <div className="w-[40%] h-full flex flex-col overflow-hidden overflow-y-auto">
+        <div className="sm:w-[40%] h-full flex flex-col overflow-hidden overflow-y-auto">
             {timeLineElements.reverse().map((element, index) => {
                 return (
                     <div key={index} className="flex flex-row">
