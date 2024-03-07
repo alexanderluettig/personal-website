@@ -80,6 +80,10 @@ const BlogPost = ({
         <>
             <Head>
                 <title>{title}</title>
+                <meta
+                    name="description"
+                    content={title + '| Alexander Lüttig'}
+                />
             </Head>
             <div className="h-full w-full overflow-hidden overflow-y-scroll border-2 rounded border-dark-yellow p-10">
                 <div className="mb-5">

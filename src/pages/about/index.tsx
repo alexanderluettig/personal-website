@@ -9,7 +9,7 @@ const About: React.FC = () => {
                 <title>About</title>
                 <meta
                     name="description"
-                    content="I am Alexander Lüttig, a passionate software developer and technology enthusiast. My dedication to backend development and problem-solving has shaped my career and interests. Discover my story, skills, and the motivations that fuel my quest for deep knowledge in software development."
+                    content="I am Alexander Lüttig, a passionate software developer and technology enthusiast. My dedication to backend development and problem-solving has shaped my career and interests. Discover my story, skills, and the motivations that fuel my quest for deep knowledge in software development. | Alexander Lüttig"
                 />
             </Head>
 

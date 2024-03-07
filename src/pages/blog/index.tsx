@@ -104,7 +104,7 @@ const Blog = ({ years }: InferGetStaticPropsType<typeof getStaticProps>) => {
                 <title>Blog</title>
                 <meta
                     name="description"
-                    content="Take a peek into my blog, where I jot down my thoughts on coding and software development. From what I'm learning to what's currently blowing my mind in tech, it's all here. Whether you're a fellow coder or just tech-curious, there's something here for you."
+                    content="Take a peek into my blog, where I jot down my thoughts on coding and software development. From what I'm learning to what's currently blowing my mind in tech, it's all here. Whether you're a fellow coder or just tech-curious, there's something here for you. | Alexander Lüttig"
                 />
             </Head>
 

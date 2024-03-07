@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
                 <title>Contact</title>
                 <meta
                     name="description"
-                    content="Got something on your mind? Let's chat! Whether you're looking to talk tech, collaborate on a project, or just drop a hello, you've come to the right place. I'm all ears for ideas, questions, and everything in between."
+                    content="Got something on your mind? Let's chat! Whether you're looking to talk tech, collaborate on a project, or just drop a hello, you've come to the right place. I'm all ears for ideas, questions, and everything in between. | Alexander Lüttig"
                 />
             </Head>
 

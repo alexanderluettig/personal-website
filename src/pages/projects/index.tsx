@@ -65,7 +65,7 @@ const Projects: React.FC = () => {
                 <title>Projects</title>
                 <meta
                     name="description"
-                    content="Dive into my world of coding projects where innovation and functionality meet. My work, ranging from open-source contributions to personal endeavors, showcases my commitment to excellence in software development and my passion for pushing technological boundaries."
+                    content="Dive into my world of coding projects where innovation and functionality meet. My work, ranging from open-source contributions to personal endeavors, showcases my commitment to excellence in software development and my passion for pushing technological boundaries. | Alexander Lüttig"
                 />
             </Head>
 

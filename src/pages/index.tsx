@@ -20,7 +20,7 @@ const IndexPage: React.FC = () => {
                 <title>Home</title>
                 <meta
                     name="description"
-                    content="Hey there! Welcome to my little corner of the internet. Here, I share my journey through tech and software development, my projects, and all things coding that catch my eye. Dive in and see what I'm all about!"
+                    content="Hey there! Welcome to my little corner of the internet. Here, I share my journey through tech and software development, my projects, and all things coding that catch my eye. Dive in and see what I'm all about! | Alexander Lüttig"
                 />
             </Head>
 
