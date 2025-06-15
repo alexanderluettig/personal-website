@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
                 />
             </Head>
 
-            <div className="h-full border-2 rounded border-dark-yellow">
+            <div className="h-full border-2 rounded-sm border-dark-yellow">
                 Contact
             </div>
         </>

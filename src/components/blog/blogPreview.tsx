@@ -19,7 +19,7 @@ const BlogPreview: React.FC<BlogPostPreview> = ({ post }) => {
     return (
         <div key={post.title} className="w-[45%] grow">
             <Link href={`/blog/${post.year}/${post.slug}`}>
-                <div className=" flex flex-col hover:cursor-pointer border-2 rounded border-light-yellow p-2 m-2">
+                <div className=" flex flex-col hover:cursor-pointer border-2 rounded-sm border-light-yellow p-2 m-2">
                     <div className="mb-2">
                         <h1 className="text-2xl">{post.title}</h1>
                         <h2 className="text-sm">{post.subtitle}</h2>

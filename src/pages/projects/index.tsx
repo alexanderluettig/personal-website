@@ -69,7 +69,7 @@ const Projects: React.FC = () => {
                 />
             </Head>
 
-            <div className="overflow-hidden overflow-y-auto h-full w-full border-2 rounded border-dark-yellow pl-10 pr-10">
+            <div className="overflow-hidden overflow-y-auto h-full w-full border-2 rounded-sm border-dark-yellow pl-10 pr-10">
                 <div className="m-3 flex items-center justify-center">
                     <SearchBar
                         callback={setSearchQuery}

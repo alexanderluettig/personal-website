@@ -7,7 +7,7 @@ interface ProjectViewProps {
 
 const ProjectView: React.FC<ProjectViewProps> = ({ project }) => {
     return (
-        <div className="w-full md:w-[45%] border-2 rounded border-light-yellow p-4 cursor-pointer grow">
+        <div className="w-full md:w-[45%] border-2 rounded-sm border-light-yellow p-4 cursor-pointer grow">
             <Link href={project.url}>
                 <span>
                     <div className="flex flex-row justify-between items-center mb-3">

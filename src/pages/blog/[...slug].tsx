@@ -85,7 +85,7 @@ const BlogPost = ({
                     content={title + '| Alexander Lüttig'}
                 />
             </Head>
-            <div className="h-full w-full overflow-hidden overflow-y-scroll border-2 rounded border-dark-yellow p-10">
+            <div className="h-full w-full overflow-hidden overflow-y-scroll border-2 rounded-sm border-dark-yellow p-10">
                 <div className="mb-5">
                     <h1 className="text-center text-4xl font-bold">{title}</h1>
                     <h2 className="text-center">{date}</h2>

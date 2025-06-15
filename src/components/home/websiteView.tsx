@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const WebsiteView: React.FC = () => {
     return (
-        <div className="p-8 pr-0 h-full border-2 rounded border-dark-yellow">
+        <div className="p-8 pr-0 h-full border-2 rounded-sm border-dark-yellow">
             <div className=" h-full flex flex-row justify-center items-center">
                 <div className="min-w-[40%] flex flex-col items-center justify-center">
                     <Image
@@ -49,7 +49,7 @@ const WebsiteView: React.FC = () => {
                             <Link href="/projects">
                                 <span className="hover:text-dark-yellow">
                                     {' '}
-                                    <span className="border-b-[1px]">
+                                    <span className="border-b">
                                         Projects
                                     </span>{' '}
                                 </span>

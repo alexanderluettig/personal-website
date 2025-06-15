@@ -13,7 +13,7 @@ const About: React.FC = () => {
                 />
             </Head>
 
-            <div className="h-full w-full overflow-hidden sm:flex overflow-y-auto border-2 rounded border-dark-yellow p-8 space-x-5 space-y-5">
+            <div className="h-full w-full overflow-hidden sm:flex overflow-y-auto border-2 rounded-sm border-dark-yellow p-8 space-x-5 space-y-5">
                 <div className="space-y-4 sm:w-[60%]">
                     <p>Name: {config.name}</p>
                     <p>

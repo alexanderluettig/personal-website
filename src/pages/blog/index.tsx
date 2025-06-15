@@ -108,7 +108,7 @@ const Blog = ({ years }: InferGetStaticPropsType<typeof getStaticProps>) => {
                 />
             </Head>
 
-            <div className="overflow-hidden h-full pl-10 pr-10 border-2 rounded border-dark-yellow w-full flex flex-col">
+            <div className="overflow-hidden h-full pl-10 pr-10 border-2 rounded-sm border-dark-yellow w-full flex flex-col">
                 <div className="m-3 flex flex-col items-center justify-center">
                     <SearchBar
                         callback={addSearchQuery}
